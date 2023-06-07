@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useLayoutEffect, useState } from "react";
+import MaterialUIExample from "./components/MaterialUIExample";
+import NestedGrid from "./components/NestedGrid";
 
 function App() {
+  const [age, setAge] = useState(0);
+  const [name, setName] = useState("");
+  // useEffect(() => {
+  //   setAge(29);
+  //   setName("김호준");
+  // }, []);
+
+  // useLayoutEffect(() => {
+  //   setAge(29);
+  //   setName("김호준");
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MaterialUIExample></MaterialUIExample>
+      <NestedGrid></NestedGrid>
+    </>
   );
 }
 
