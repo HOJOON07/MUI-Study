@@ -3,6 +3,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import { Button } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -39,20 +41,24 @@ function FormRow() {
 
 export default function NestedGrid() {
   return (
-    <Test>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={1}>
-          <Grid container item spacing={3}>
-            <FormRow />
+    <>
+      <Test>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={1}>
+            <Grid container item spacing={3}>
+              <FormRow />
+            </Grid>
+            <Grid container item spacing={3}>
+              <FormRow />
+            </Grid>
+            <Grid container item spacing={3}>
+              <FormRow />
+            </Grid>
           </Grid>
-          <Grid container item spacing={3}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={3}>
-            <FormRow />
-          </Grid>
-        </Grid>
-      </Box>
-    </Test>
+        </Box>
+      </Test>
+      <Button variant="outlined">아웃라인</Button>
+      <LoadingButton loading variant="outlined"></LoadingButton>
+    </>
   );
 }

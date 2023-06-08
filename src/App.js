@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import MaterialUIExample from "./components/MaterialUIExample";
 import NestedGrid from "./components/NestedGrid";
+import { LoadingButton } from "@mui/lab";
 
 function App() {
   const [age, setAge] = useState(0);
@@ -18,6 +19,7 @@ function App() {
     <>
       <MaterialUIExample></MaterialUIExample>
       <NestedGrid></NestedGrid>
+      <LoadingButton></LoadingButton>
     </>
   );
 }
