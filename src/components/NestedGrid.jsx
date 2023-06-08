@@ -57,8 +57,7 @@ export default function NestedGrid() {
           </Grid>
         </Box>
       </Test>
-      <Button variant="outlined">아웃라인</Button>
-      <LoadingButton loading variant="outlined"></LoadingButton>
+      {/* <Button variant="outlined">아웃라인</Button> */}
     </>
   );
 }
